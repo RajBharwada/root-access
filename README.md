@@ -1,5 +1,5 @@
 # ROOT ACCESS
-#### Video Demo: <PASTE YOUR YOUTUBE URL HERE>
+#### Video Demo: https://youtu.be/s_NeoKQB-Bs
 #### Description:
 
 ROOT ACCESS is a hacking puzzle game that runs inside a fake terminal. You play someone who has broken into a series of computers. On each one you type commands like `ls`, `cd`, `cat` and `grep` to dig around until you find a hidden flag, then you hand it in with `submit FLAG{...}` to move on to the next machine. I built it with Python and Pygame for my CS50x final project.
