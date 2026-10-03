@@ -1,0 +1,31 @@
+{
+  "name": "First Contact",
+  "host": "relay01",
+  "intro": [
+    "Target: relay01, a forgotten office server.",
+    "A careless admin left a flag somewhere on this machine."
+  ],
+  "tutorial": [
+    "Welcome! You control this computer by typing commands and pressing Enter.",
+    "Try it now: type  ls  and press Enter to look around.",
+    "Tips: Tab auto-completes names. Drag or double-click text to copy it."
+  ],
+  "objective": "Find the hidden flag on this machine and submit it. Flags look like FLAG{...}.",
+  "commands": ["ls", "cd", "cat", "pwd", "submit"],
+  "hints": [
+    "Not everything on a computer is shown by default. Read 'help' for the ls options.",
+    "Hidden files and folders start with a dot. 'ls -a' shows them.",
+    "Run 'ls -a', then 'cd .private', then 'cat flag.txt', then submit what you find."
+  ],
+  "start": ["home", "admin"],
+  "flag": "FLAG{hidden_files_are_not_secret}",
+  "fs": {
+    "home": {
+      "admin": {
+        "notes.txt": "Remember to rotate the server keys.\nAlso, I really should clean up my home folder.",
+        "docs": {"todo.txt": "- update firewall\n- back up logs"},
+        ".private": {"flag.txt": "FLAG{hidden_files_are_not_secret}"}
+      }
+    }
+  }
+}

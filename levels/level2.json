@@ -1,0 +1,24 @@
+{
+  "name": "Obfuscation",
+  "host": "vault02",
+  "intro": [
+    "Target: vault02. The flag is stored, but not in plain text.",
+    "New tool unlocked: decode."
+  ],
+  "objective": "Find the stored credentials, decode them, and submit the flag.",
+  "commands": ["ls", "cd", "cat", "pwd", "decode", "submit"],
+  "decode_modes": ["b64"],
+  "hints": [
+    "Read readme.txt first. It tells you where the backups live.",
+    "The odd-looking text in creds.enc is encoded, not encrypted. Try: decode b64 <text>",
+    "Double-click the encoded text to select it, press Ctrl+C, type 'decode b64 ' and press Ctrl+V."
+  ],
+  "start": ["srv"],
+  "flag": "FLAG{base64_is_not_encryption}",
+  "fs": {
+    "srv": {
+      "readme.txt": "Backups live in /srv/backup. Credentials are encoded for safety.",
+      "backup": {"creds.enc": "RkxBR3tiYXNlNjRfaXNfbm90X2VuY3J5cHRpb259"}
+    }
+  }
+}

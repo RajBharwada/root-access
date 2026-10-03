@@ -1,0 +1,27 @@
+{
+  "name": "Caesar's Mailbox",
+  "host": "mail03",
+  "intro": [
+    "Target: mail03. An intern 'secured' the key with an ancient trick.",
+    "decode now understands a second cipher."
+  ],
+  "objective": "Read the intern's note, work out how the key was scrambled, undo it, and submit the flag.",
+  "commands": ["ls", "cd", "cat", "pwd", "decode", "submit"],
+  "decode_modes": ["b64", "caesar"],
+  "hints": [
+    "Read note.txt, then look at the other file.",
+    "The note says every letter moved forward 3 places. Undo it by shifting back: decode caesar -3 <text>",
+    "Copy the text from key.txt (double-click it) and run: decode caesar -3 <paste>"
+  ],
+  "start": ["home", "intern"],
+  "flag": "FLAG{caesar_was_here}",
+  "fs": {
+    "home": {
+      "intern": {
+        "note.txt": "I scrambled the key by moving every letter forward by 3 places.\nJulius Caesar would be proud!",
+        "key.txt": "IODJ{fdhvdu_zdv_khuh}",
+        "lunch_orders.txt": "Mon: pizza\nTue: ramen\nWed: pizza (again)"
+      }
+    }
+  }
+}
